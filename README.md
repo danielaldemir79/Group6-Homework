@@ -1,4 +1,4 @@
-# Grupp 6 Hrmläxa
+# Grupp 6 Hemläxa
 **Deltagare:** Aygen, Jenny, John, Axel, Frans, Charlie och Daniel A
 
 ## Grundinstruktioner
