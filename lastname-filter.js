@@ -9,7 +9,7 @@ function render(search = '') {
     .filter(({ lastName }) => search === ''
       || lastName.toLowerCase().startsWith(search.toLowerCase()))
 
-    .toSorted((a, b) => a.firstName > b.firstName ? 1 : - 1)
+    .toSorted((a, b) => a.lastName > b.lastName ? 1 : - 1)
 
     .map(({ firstName, lastName, email, birthDate }) => `
     <section class="person">
