@@ -1,25 +1,88 @@
-# Grupp 6 Hemläxa
+# Grupp 6 Hemläxa - Status Update 📊
 **Deltagare:** Aygen, Jenny, John, Axel, Frans, Charlie och Daniel A
 
-## Grundinstruktioner
-- Skapa flera varianter av `html` och `js-fil`, så att varje HTML-fil har en egen JS-fil och fungerar på sitt eget sätt.
-- Alla sidor ska dela samma CSS-fil.
+## 🎯 Projektöversikt
+Vi har nu en **Project Hub** på `index.html` som visar alla funktioner och deras status. Använd denna som startsida för navigation mellan olika features.
 
-## Funktioner
-- En funktion som beräknar ålder utifrån födelsedatum.
-- Filtrera på efternamn och sortera efter efternamn.
-- Filtrera på e-post och sortera efter e-post.
-- Filtrera på ålder och sortera efter ålder (visa åldern).
-- En sida där användaren kan välja sorteringsfält via ett `select`-element.
-- Förbättra sidans utseende genom att uppdatera CSS.
-- Ett menysystem som låter oss växla mellan de olika sidorna (via länkar/a-taggar).
+## ✅ Vad som är klart:
+- **Project Hub** (`index.html`) - Översikt över alla funktioner
+- **Modern CSS-design** (`style.css`) - Gemensam styling för alla sidor
+- **Sök på förnamn** (`firstname-filter.html` + `firstname-filter.js`) - Första funktionen är implementerad
+- **Navigation** - Tillbaka-knappar mellan sidor
 
-## Arbetsflöde
-Detta är ett test/övning i att arbeta tillsammans med programmering:
+## 📋 Funktioner att implementera:
 
-- Diskutera och bestäm vem som tar varje funktion/uppgift.
-- Kontrollera om vissa uppgifter är beroende av varandra (t.ex. att skapa menysystemet).
-- Arbeta i separata feature-brancher i ett gemensamt Git-repo. Bestäm vem som sätter upp repot och bjuder in övriga.
-- Behöver vi ett Trello-flöde? Skapa i så fall kolumnerna TODO, DOING, REVIEW och DONE för att hålla koll på vad alla arbetar med. (En person skapar tavlan och delar den med resten.)
-- Tänk på att VSC inte är optimalt för alla Git-uppgifter som merge och clone. Överväg därför terminalkommandon eller GitHub Desktop – varje teammedlem väljer själv.
-- Ni kan använda Thomas kod som startpunkt, men använd inte Thomas repo som fork. Ladda hellre ner hans repo som zip, packa upp och använd som bas för ert eget arbete.
+### 1. ✅ Sök på förnamn (FÄRDIG)
+- **Filer:** `firstname-filter.html`, `firstname-filter.js`
+- **Status:** Implementerad och fungerar
+
+### 2. 🔨 Åldersberäkning 
+- **Filer att skapa:** `age-calculator.html`, `age-calculator.js`
+- **Funktion:** Beräkna ålder utifrån födelsedatum
+
+### 3. 🔨 Filtrera på efternamn
+- **Filer att skapa:** `lastname-filter.html`, `lastname-filter.js`
+- **Funktion:** Filtrera och sortera efter efternamn
+
+### 4. 🔨 Filtrera på e-post
+- **Filer att skapa:** `email-filter.html`, `email-filter.js`
+- **Funktion:** Filtrera och sortera efter e-postadress
+
+### 5. 🔨 Filtrera på ålder
+- **Filer att skapa:** `age-filter.html`, `age-filter.js`
+- **Funktion:** Filtrera och sortera efter ålder (visa åldern)
+
+### 6. 🔨 Dynamisk sortering
+- **Filer att skapa:** `dynamic-sort.html`, `dynamic-sort.js`
+- **Funktion:** Select-element för att välja sorteringsfält
+
+### 7. 🎨 CSS-förbättringar
+- **Fil att uppdatera:** `style.css`
+- **Funktion:** Förbättra design (pågående process)
+
+### 8. 🧭 Menysystem/Navigation
+- **Uppdatera:** Alla HTML-filer
+- **Funktion:** Konsekvent navigation mellan sidor
+
+## 🚀 Snabbstart för utvecklare
+
+### Steg 1: Välj din funktion
+Öppna `index.html` i webbläsaren och se alla tillgängliga funktioner. Välj en som inte är tagen.
+
+### Steg 2: Kopiera befintlig kod som bas
+**ANVÄND `firstname-filter.html` och `firstname-filter.js` som mall!**
+
+
+### Steg 3: Anpassa din kopia
+1. **Uppdatera HTML:**
+   - Ändra `<title>` till din funktions namn
+   - Uppdatera header-text (`<h1>` och `<p>`)
+   - Anpassa innehållet för din specifika funktion
+   - Länka till rätt JS-fil i `<script>` taggen
+
+2. **Anpassa JavaScript:**
+   - Behåll grundstrukturen för att ladda `people.json`
+   - Ändra filterings-/söklogiken för din specifika funktion
+   - Uppdatera `displayPeople()` funktionen om behövs
+
+### Steg 4: Uppdatera Hub-sidan
+I `index.html`, hitta ditt funktions-kort och uppdatera:
+- Ta bort `template` klassen från `<div class="function-card template">`
+- Ta bort `disabled` klassen från länken
+- Uppdatera länk-attributet `href="din-feature.html"`
+- Lägg till ditt namn som utvecklare
+
+
+
+## 🔧 Arbetsflöde
+- **Diskutera och tilldela** funktioner i teamet
+- **Kopiera befintlig kod** som startpunkt (INTE skapa från scratch)
+- **Testa din feature** innan du commitar
+- **Uppdatera din kod innan push** GÖR EN PULL INNAN DU PUSHAR UPP KOD FÖR ATT UNDVIKA CONFLICT.
+- **Uppdatera hub-sidan** när din feature är klar
+- **Arbeta i feature-brancher** för att undvika konflikter
+
+
+- Använd **samma CSS-klass** som redan finns
+- **Kommentera din JavaScript-kod** så andra förstår
+- **Håll samma struktur** som `firstname-filter.html` för konsistens
