@@ -6,8 +6,8 @@ function render(search = '') {
 
   let html = people
 
-    .filter(({ firstName }) => search === ''
-      || firstName.toLowerCase().startsWith(search.toLowerCase()))
+    .filter(({ lastName }) => search === ''
+      || lastName.toLowerCase().startsWith(search.toLowerCase()))
 
     .toSorted((a, b) => a.firstName > b.firstName ? 1 : - 1)
 
