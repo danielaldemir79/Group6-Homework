@@ -1,0 +1,33 @@
+const peopleRaw = await fetch('people.json');
+
+const people = await peopleRaw.json();
+
+function render(search = '') {
+
+  let html = people
+
+    .filter(({ firstName }) => search === ''
+      || firstName.toLowerCase().startsWith(search.toLowerCase()))
+
+    .toSorted((a, b) => a.firstName > b.firstName ? 1 : - 1)
+
+    .map(({ firstName, lastName, email, birthDate }) => `
+    <section class="person">
+      <p><b>First name:</b> ${firstName}</p>
+      <p><b>Last name:</b> ${lastName}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Date of birth:</b> ${birthDate}</p>
+    </section>
+  `)
+    .join('');
+
+  document.querySelector('.people').innerHTML = html;
+
+}
+
+document.querySelector('.search-field')
+  .addEventListener('keyup', event => {
+    render(event.target.value);
+  });
+
+render();
