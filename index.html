@@ -3,15 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Group 6 - Person Database Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <input class="search-field" type="text" placeholder="Search by first name">
-  <article class="people"></article>
-  <!-- Add your script last in body -->
-  <script type="module" src="main.js"></script>
-</body>
+  <header class="main-header">
+    <h1>Group 6 - Person Database</h1>
+    <p class="subtitle">Välkommen till vårt gemensamma projekt</p>
+    <p class="team-info">Deltagare: Aygen, Jenny, John, Axel, Frans, Charlie och Daniel A</p>
+  </header>
 
+  <main class="hub-container">
+    <div class="functions-grid">
+      
+      <!-- Funktion 1: Sök på förnamn (FÄRDIG) -->
+      <div class="function-card completed">
+        <div class="function-header">
+          <h3>Sök på Förnamn</h3>
+          <span class="status-badge completed">✅ FÄRDIG</span>
+        </div>
+        <p class="function-description">Sök och filtrera personer baserat på förnamn</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> Thomas Frank
+        </div>
+        <div class="function-actions">
+          <a href="firstname-filter.html" class="btn primary">Öppna Funktion</a>
+        </div>
+      </div>
+
+      <!-- Funktion 2: Åldersberäkning -->
+      <div class="function-card todo">
+        <div class="function-header">
+          <h3>Åldersberäkning</h3>
+          <span class="status-badge todo">📋 TODO</span>
+        </div>
+        <p class="function-description">Beräkna ålder utifrån födelsedatum och visa resultatet</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> [Tilldelas imorgon]
+        </div>
+        <div class="function-actions">
+          <span class="btn disabled">Kommande Implementation</span>
+        </div>
+        <div class="tech-notes">
+          <strong>Fil att skapa:</strong> age-calculator.html + age-calculator.js
+        </div>
+      </div>
+
+      <!-- Funktion 3: Filtrera på efternamn -->
+      <div class="function-card todo">
+        <div class="function-header">
+          <h3>Filtrera på Efternamn</h3>
+          <span class="status-badge todo">📋 TODO</span>
+        </div>
+        <p class="function-description">Filtrera och sortera personer efter efternamn</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> [Tilldelas imorgon]
+        </div>
+        <div class="function-actions">
+          <span class="btn disabled">Kommande Implementation</span>
+        </div>
+        <div class="tech-notes">
+          <strong>Fil att skapa:</strong> lastname-filter.html + lastname-filter.js
+        </div>
+      </div>
+
+      <!-- Funktion 4: Filtrera på e-post -->
+      <div class="function-card todo">
+        <div class="function-header">
+          <h3>Filtrera på E-post</h3>
+          <span class="status-badge todo">📋 TODO</span>
+        </div>
+        <p class="function-description">Filtrera och sortera personer efter e-postadress</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> [Tilldelas imorgon]
+        </div>
+        <div class="function-actions">
+          <span class="btn disabled">Kommande Implementation</span>
+        </div>
+        <div class="tech-notes">
+          <strong>Fil att skapa:</strong> email-filter.html + email-filter.js
+        </div>
+      </div>
+
+      <!-- Funktion 5: Filtrera på ålder -->
+      <div class="function-card todo">
+        <div class="function-header">
+          <h3>Filtrera på Ålder</h3>
+          <span class="status-badge todo">📋 TODO</span>
+        </div>
+        <p class="function-description">Filtrera och sortera personer efter ålder (visa åldern)</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> [Tilldelas imorgon]
+        </div>
+        <div class="function-actions">
+          <span class="btn disabled">Kommande Implementation</span>
+        </div>
+        <div class="tech-notes">
+          <strong>Fil att skapa:</strong> age-filter.html + age-filter.js
+        </div>
+      </div>
+
+      <!-- Funktion 6: Dynamisk sortering -->
+      <div class="function-card todo">
+        <div class="function-header">
+          <h3>Dynamisk Sortering</h3>
+          <span class="status-badge todo">📋 TODO</span>
+        </div>
+        <p class="function-description">Sida där användaren kan välja sorteringsfält via select-element</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> [Tilldelas imorgon]
+        </div>
+        <div class="function-actions">
+          <span class="btn disabled">Kommande Implementation</span>
+        </div>
+        <div class="tech-notes">
+          <strong>Fil att skapa:</strong> dynamic-sort.html + dynamic-sort.js
+        </div>
+      </div>
+
+      <!-- Funktion 7: CSS-förbättringar -->
+        <div class="function-card completed">
+          <div class="function-header">
+            <h3>CSS Design</h3>
+            <span class="status-badge completed">✅ FÄRDIG</span>
+        </div>
+
+        <p class="function-description">Förbättra sidans utseende genom att uppdatera CSS</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> Daniel Aldemir
+        </div>
+        <div class="tech-notes">
+          <strong>Startsida skapad med CSS design där varje användare kan koppla in sin html med tillhörande javascript</strong> 
+        </div>
+      </div>
+
+      <!-- Funktion 8: Menysystem -->
+       <div class="function-card completed">
+        <div class="function-header">
+          <h3>Navigation/Meny</h3>
+          <span class="status-badge completed">✅ FÄRDIG</span>
+        </div>
+        <p class="function-description">Menysystem som låter oss växla mellan olika sidor via länkar</p>
+        <div class="developer-info">
+          <strong>Utvecklare:</strong> Daniel Aldemir
+        </div>
+        <div class="tech-notes">
+          <strong>Sidans layout navigerar mellan olika funktioner och HTML-filer.</strong> 
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>Group 6 Hemläxa - Utveckling startar imorgon! 🚀</p>
+    <p>Kom ihåg: Varje HTML-fil ska ha sin egen JS-fil och alla delar samma CSS-fil</p>
+  </footer>
+
+</body>
 </html>

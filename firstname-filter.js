@@ -37,11 +37,12 @@ function render(search = '') {
     // sort by firstName
     .toSorted((a, b) => a.firstName > b.firstName ? 1 : - 1)
     // map to convert each element to a string with html
-    .map(({ firstName, lastName, email }) => `
+    .map(({ firstName, lastName, email, birthDate }) => `
     <section class="person">
       <p><b>First name:</b> ${firstName}</p>
       <p><b>Last name:</b> ${lastName}</p>
       <p><b>Email:</b> ${email}</p>
+      <p><b>Date of birth:</b> ${birthDate}</p>
     </section>
   `)
     // join to join our array of strings into one large string
