@@ -2,7 +2,9 @@
 const peopleRaw = await fetch('./people.json');
 const people = await peopleRaw.json();
 
-// Calculate age based on birth date
+// Calculate age based on birth date 
+//You can change here
+
 function calculateAge(birthDate) {
   const birth = new Date(birthDate);
   const today = new Date();
