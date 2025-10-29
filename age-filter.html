@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Filtrera på Ålder</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,15 +12,22 @@
   <header class="main-header">
     <a href="index.html" class="back-link">← Tillbaka till Hub</a>
     <h1>Filtrera på Ålder</h1>
-    <p class="subtitle">Filtrera och sortera personer efter ålder </p> <!--(visa åldern) -->
+    <p class="subtitle">Filtrera och sortera personer efter ålder</p>
   </header>
 
   <div class="content-container">
-    <input class="search-field" type="text" placeholder="Visa åldern">
+    <input class="search-field" type="number" placeholder="Skriv minsta ålder">
+
+    <select class="sort-select" title="Välj sorteringsordning">
+      <option value="desc">Äldst först (störst till minst)</option>
+      <option value="asc">Yngst först (minst till störst)</option>
+    </select>
+
+    <!-- The list of people will be displayed here -->
     <article class="people"></article>
   </div>
-  
-  <!-- Add your script last in body -->
-  <script type="module" src="age-filter.js"></script>
+  <script src="age-calculator.js"></script> <!--For global using no module-->
+  <script src="age-filter.js"></script>
 
+</body>
 </html>
