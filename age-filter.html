@@ -4,36 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filtrera efter ålder</title>
+  <title>Åldersberäkning - Group 6</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Filtrera efter ålder</h1>
 
-  <p>Sidan för att räkna ut och filtrera personer baserat på ålder.</p>
-  <!-- Funktion 2: Åldersberäkning -->
-  <div class="function-card todo">
-    <div class="function-header">
-      <h3>Åldersberäkning</h3>
-      <span class="status-badge todo">📋 TODO</span>
-    </div>
-    <p class="function-description">Beräkna ålder utifrån födelsedatum och visa resultatet</p>
-    <div class="developer-info">
-      <strong>Utvecklare:</strong> Jenny
-    </div>
-    <div class="function-actions">
-      <label for="birthdate">Ange ditt födelsedatum:</label><br>
-      <input type="date" id="birthdate">
-      <button id="calcAgeBtn">Beräkna ålder</button>
-      <p id="ageResult"></p>
-    </div>
-    <div class="tech-notes">
-      <strong>Fil att skapa:</strong> age-calculator.html + age-calculator.js
-    </div>
+  <header class="main-header">
+    <a href="index.html" class="back-link">← Tillbaka till Hub</a>
+    <h1>Åldersberäkning</h1>
+    <p class="subtitle">Visa alla personer med beräknad ålder</p>
+  </header>
+
+  <div class="content-container">
+    <h2 class="input-header">Alla personer med ålder</h2>
+    <p class="info-text">Åldern beräknas automatiskt baserat på födelsedatum och visas bredvid varje persons
+      information.</p>
+
+    <article class="people"></article>
   </div>
 
-  <script src="age-filter.js"></script>
-</body>
+  <!-- Add your script last in body -->
+  <script type="module" src="age.js"></script>
 
 </html>
