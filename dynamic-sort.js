@@ -62,6 +62,31 @@ function render(sortType, searchTerm = '') {
 }
 
 
+// Dropdown change
+sortDropdown.addEventListener('change', (e) => {
+  const sortType = e.target.value;
+
+  if (sortType === '') {
+    // Inget valt - dölj sökruta
+    searchContainer.style.display = 'none';
+    document.querySelector('.people').innerHTML = '';
+  } else {
+    // Något valt - visa sökruta
+    searchContainer.style.display = 'block';
+    const currentSearch = searchInput.value || '';
+    render(sortType, currentSearch);
+  }
+});
+
+// Search input
+searchInput.addEventListener('keyup', (e) => {
+  const currentSort = sortDropdown.value;
+  const searchTerm = e.target.value;
+  render(currentSort, searchTerm);
+});
+
+
+
 
 
 
