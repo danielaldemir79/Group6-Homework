@@ -2,7 +2,21 @@
 const peopleRaw = await fetch('./people.json');
 const people = await peopleRaw.json();
 
+// Calculate age based on birth date
+function calculateAge(birthDate) {
+  const birth = new Date(birthDate);
+  const today = new Date();
 
+  let age = today.getFullYear() - birth.getFullYear();
+  const monthDiff = today.getMonth() - birth.getMonth();
+
+  // Adjust if birthday hasn't occurred this year yet
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+
+  return age;
+}
 
 function render(search = '', sortOrder = 'desc') {
   let html = people
