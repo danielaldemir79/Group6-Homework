@@ -34,55 +34,90 @@ const searchContainer = document.getElementById('search-container');
 function render(sortType, searchTerm = '') {
   // sortType: 'firstName', 'lastName', 'email', 'age'
   // searchTerm: vad användaren skrivit i sökrutan
+  
+  let filteredPeople;
+  
+  // Filter och sortera baserat på sortType
+  switch (sortType) {
+    
+    case 'firstName':
+      filteredPeople = people 
+        .filter(({ firstName }) => searchTerm === '' 
+          || firstName.toLowerCase().startsWith(searchTerm.toLowerCase()))
+        .toSorted((a, b) => a.firstName > b.firstName ? 1 : -1);
+      break;
+      
+    case 'lastName':
+      filteredPeople = people
+        .filter(({ lastName }) => searchTerm === '' 
+          || lastName.toLowerCase().startsWith(searchTerm.toLowerCase()))
+        .toSorted((a, b) => a.lastName > b.lastName ? 1 : -1);
+      break;
+      
+    case 'email':
+      filteredPeople = people
+        .filter(({ email }) => searchTerm === '' 
+          || email.toLowerCase().startsWith(searchTerm.toLowerCase()))
+        .toSorted((a, b) => a.email > b.email ? 1 : -1);
+      break;
+      
+    case 'age':
+      filteredPeople = people
+        .filter((person) => {
+          if (searchTerm === '') return true; //Show all if empty
+          const age = calculateAge(person.birthDate);
+          return age.toString().startsWith(searchTerm);
+          //returns age in string
+        })
+        .toSorted((a, b) => calculateAge(a.birthDate) - calculateAge(b.birthDate)); // Sortera på ålder (yngst först)
+      break;
+      
+    default:
+      filteredPeople = []; // Om inget giltigt val, tom lista
+  }
 
-  // Using map to convert our array of objects (people) to html
-  // with calculated age displayed next to birth date
-  
-  
-    let html = people
-    // sort by firstName like the other files
-    .toSorted((a, b) => a.sortType > b.sortType ? 1 : -1)
-    // map to convert each element to a string with html
+  // Skapa HTML
+  let html = filteredPeople 
     .map(({ firstName, lastName, email, birthDate }) => {
       const age = calculateAge(birthDate);
       return `
-            <section class="person">
-                <p><b>First name:</b> ${firstName}</p>
-                <p><b>Last name:</b> ${lastName}</p>
-                <p><b>Email:</b> ${email}</p>
-                <p><b>Date of birth:</b> ${birthDate} <span class="age-highlight">(${age} år gammal)</span></p>
-            </section>
-            `;
+        <section class="person">
+          <p><b>First name:</b> ${firstName}</p>
+          <p><b>Last name:</b> ${lastName}</p>
+          <p><b>Email:</b> ${email}</p>
+          <p><b>Date of birth:</b> ${birthDate} <span class="age-highlight">(${age} år gammal)</span></p>
+        </section>
+      `;
     })
-    // join to join our array of strings into one large string
-    .join('');
+    .join(''); // Slå ihop alla sektioner till en sträng
   
-  // replace the content of article.people element with our new html
-   document.querySelector('.people').innerHTML = html;
+  // Visa resultatet
+  document.querySelector('.people').innerHTML = html; 
 }
 
 
-// Dropdown change
+// Vid dropdown förändring
 sortDropdown.addEventListener('change', (e) => {
-  const sortType = e.target.value;
+  const sortType = e.target.value; // Value i dropdown
 
   if (sortType === '') {
-    // Inget valt - dölj sökruta
-    searchContainer.style.display = 'none';
-    document.querySelector('.people').innerHTML = '';
+    // Inget valt - dölj sökruta och rensa input
+    searchContainer.style.display = 'none'; // Dölj sökruta
+    searchInput.value = ''; // Nollställ input-fältet
+    document.querySelector('.people').innerHTML = ''; // Töm resultat
   } else {
-    // Något valt - visa sökruta
-    searchContainer.style.display = 'block';
-    const currentSearch = searchInput.value || '';
-    render(sortType, currentSearch);
+    // Något valt
+    searchContainer.style.display = 'block'; // Visa sökruta
+    searchInput.value = ''; // Nollställ input-fältet
+    render(sortType, ''); // Rendera med valt sorteringsalternativ och tom sökterm
   }
 });
 
-// Search input
-searchInput.addEventListener('keyup', (e) => {
-  const currentSort = sortDropdown.value;
-  const searchTerm = e.target.value;
-  render(currentSort, searchTerm);
+// lyssna på sökinput förändring
+searchInput.addEventListener('keyup', (e) => {  // Vid keyup i sökinput
+  const currentSort = sortDropdown.value; // Value i dropdown
+  const searchTerm = e.target.value;  // Text i sökinput
+  render(currentSort, searchTerm);    // Rendera med nuvarande sortering och sökterm
 });
 
 
