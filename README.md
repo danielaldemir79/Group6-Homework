@@ -79,19 +79,11 @@ Alla funktioner använder samma `people.json` fil med testdata om personer.
 - ✅ Modern, responsiv CSS-design
 - ✅ Konsekvent navigation mellan sidor
 - ✅ Project Hub för översikt
-- ✅ Individuella bidrag från alla teammedlemmar
 - ✅ Gemensam kodstruktur och styling
 
-## 🔧 Teknisk implementation
 
-**Arkitektur:**
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **Data:** JSON-fil med persondata
-- **Design:** Responsiv design med CSS Grid och Flexbox
-- **Navigation:** Konsekvent menysystem mellan alla sidor
 
-**Kodstandard:**
-- Gemensam CSS-fil (`style.css`) för alla sidor
-- Konsekvent HTML-struktur
-- Kommenterad JavaScript-kod
-- Modulär uppbyggnad per funktion
+
+
+
+
