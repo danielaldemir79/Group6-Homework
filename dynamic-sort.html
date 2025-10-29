@@ -16,10 +16,13 @@
     <p class="subtitle">Välj vad du vill söka på</p>
   </header>
 
+
+
+
   <div class="content-container">
     <div class="sort-selection">
       <label for="sort-type">Välj vad du vill sortera på:</label>
-      <select id="sort-type" class="sort-dropdown">
+      <select id="sort-type" class="search-field">
         <option value="">-- Välj sorteringstyp --</option>
         <option value="firstName">Förnamn</option>
         <option value="lastName">Efternamn</option>
@@ -28,12 +31,11 @@
       </select>
     </div>
 
-    <!-- Dessa döljs tills användaren valt -->
-    <div class="search-container" style="display: none;">
-     <input class="search-field" type="text" placeholder="Sök...">
-   </div>
-    
-      <article class="people"></article>
+    <div class="search-container" id="search-container" style="display: none;">
+      <input class="search-field" id="search-input" type="text" placeholder="Sök...">
+    </div>
+
+    <article class="people"></article>
   </div>
 
   <!-- Add your script last in body -->
