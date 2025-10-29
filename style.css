@@ -264,3 +264,45 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.age-highlight{
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   DYNAMIC SORT styling
+   ========================================================================== */
+
+.sort-selection {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.sort-selection label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.sort-dropdown {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.sort-dropdown:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}

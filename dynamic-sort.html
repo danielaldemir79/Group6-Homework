@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic sortering i personregister</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <a href="index.html" class="back-link">← Tillbaka till Hub</a>
+    <h1>Sökning i personregister</h1>
+  </header>
+
+
+
+
+  <div class="content-container">
+    <div class="sort-selection">
+      <label for="sort-type">Välj vad du vill söka på:</label>
+      <select id="sort-type" class="search-field">
+        <option value="">-- Välj sökningstyp --</option>
+        <option value="firstName">Förnamn</option>
+        <option value="lastName">Efternamn</option>
+        <option value="email">E-post</option>
+        <option value="age">Ålder</option>
+      </select>
+    </div>
+
+    <div class="search-container" id="search-container" style="display: none;">
+      <input class="search-field" id="search-input" type="text" placeholder="Sök...">
+    </div>
+
+    <article class="people"></article>
+  </div>
+
+  <!-- Add your script last in body -->
+  <script type="module" src="dynamic-sort.js"></script>
+
+</html>
